@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./src/js",
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "isolatedModules": false,
+        "jsx": "react",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "noImplicitUseStrict": false,
+        "noLib": false,
+        "paths": {
+          "Classes/*": ["Classes/*"],
+          "Interfaces/*": ["Interfaces/*"]
+        },
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "target": "es6"
+    },
+    "exclude": [
+        "node_modules",
+        "typings/browser",
+        "typings/browser.d.ts"
+    ],
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    }
+}

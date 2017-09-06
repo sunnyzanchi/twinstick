@@ -1,0 +1,13 @@
+{
+  "name": "twinstick",
+  "version": "1.0.0",
+  "description": "Twinstick shooter",
+  "main": "index.js",
+  "author": "Zanchi",
+  "license": "MIT",
+  "dependencies": {
+    "ts-loader": "^2.3.4",
+    "typescript": "^2.5.2",
+    "webpack": "^3.5.5"
+  }
+}
