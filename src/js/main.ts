@@ -1,4 +1,7 @@
 import Player from 'Classes/Player';
+import Bullet from 'Classes/Bullet';
+
+import clampedPoint from './clampedPoint';
 
 const canvas: HTMLCanvasElement = document.querySelector('canvas');
 const ctx: CanvasRenderingContext2D = canvas.getContext('2d');
@@ -46,4 +49,13 @@ window.addEventListener('keydown', function(e){
     case 'w': return player.velocity[1] -= 5;
     case 's': return player.velocity[1] += 5;
   }
-})
+});
+
+canvas.addEventListener('click', function(e){
+  entities.add(new Bullet({
+    drag: .99,
+    mass: 1,
+    position: [player.position[0], player.position[1]],
+    velocity: clampedPoint(10, player.position, [e.x, e.y]),
+  }));
+});
