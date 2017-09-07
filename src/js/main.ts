@@ -22,13 +22,10 @@ const render = function render(): void{
   ctx.clearRect(0, 0, 400, 400);
 
   for(let i of entities){
-    const [x, y] = i.position;
-    ctx.beginPath();
-    ctx.ellipse(x, y, 10, 10, 0, 0, Math.PI * 2);
-    ctx.stroke();
-
+    i.draw(ctx);
     i.update();
   }
+
   const gp = navigator.getGamepads()[0];
   if(gp){
     player.velocity[0] += threshold(gp.axes[0]);
