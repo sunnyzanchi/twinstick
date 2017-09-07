@@ -48,7 +48,7 @@ window.addEventListener('keydown', function(e){
   }
 });
 
-canvas.addEventListener('click', function(e){
+canvas.addEventListener('mousedown', function(e){
   entities.add(new Bullet({
     drag: .99,
     mass: 1,
