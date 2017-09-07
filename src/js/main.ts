@@ -34,3 +34,14 @@ const render = function render(): void{
 }
 
 render();
+
+window.addEventListener('keydown', function(e){
+  if(e.repeat) return;
+
+  switch(e.key){
+    case 'a': return player.velocity[0] -= 5;
+    case 'd': return player.velocity[0] += 5;
+    case 'w': return player.velocity[1] -= 5;
+    case 's': return player.velocity[1] += 5;
+  }
+})
