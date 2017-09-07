@@ -20,6 +20,7 @@ const render = function render(): void{
 
   for(let i of entities){
     const [x, y] = i.position;
+    ctx.beginPath();
     ctx.ellipse(x, y, 10, 10, 0, 0, Math.PI * 2);
     ctx.stroke();
 
