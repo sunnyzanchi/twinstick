@@ -27,8 +27,10 @@ const render = function render(): void{
     i.update();
   }
   const gp = navigator.getGamepads()[0];
-  player.velocity[0] += threshold(gp.axes[0]);
-  player.velocity[1] += threshold(gp.axes[1]);
+  if(gp){
+    player.velocity[0] += threshold(gp.axes[0]);
+    player.velocity[1] += threshold(gp.axes[1]);
+  }
 
   requestAnimationFrame(render);
 }
