@@ -6,11 +6,15 @@
   "author": "Zanchi",
   "license": "MIT",
   "dependencies": {
+    "matter-js": "^0.13.0",
     "ts-loader": "^2.3.4",
     "typescript": "^2.5.2",
     "webpack": "^3.5.5"
   },
   "scripts": {
     "dev": "webpack && http-server -p 3000 ./public"
+  },
+  "devDependencies": {
+    "@types/matter-js": "^0.9.33"
   }
 }
